@@ -18,7 +18,7 @@ if ( !process.env.NODE_ENV ) { require('dotenv').config(); }
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "http://localhost:3000/login/facebook/callback",
+    callbackURL: process.env.HOST + "/login/facebook/callback",
     profileFields: ['id', 'name', 'picture', 'displayName', 'email']
   },
   function(accessToken, refreshToken, profile, done) {
