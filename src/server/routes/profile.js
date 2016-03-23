@@ -46,6 +46,7 @@ router.post('/new', function(req,res,next) {
 // display user information on edit page
 router.get('/:id/edit', function(req, res, next) {
   var id = req.params.id;
+  console.log('line 49 id',id);
   queriesag.getSingleUser(id).then(function(results) {
   res.render('users/edit', { title: 'Edit User Profile', results:results });
   });

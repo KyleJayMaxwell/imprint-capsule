@@ -29,7 +29,7 @@
                         <small> Last Imprinted <time>{{ results[0].created_at|date('Y-m-d H:i:s') }}</time></small>
                         {% endif %}
                         {% if user.u_id == id %}
-                          <a href="/profile/{{ results[0].u_id }}/edit" class="btn btn-success" role="button">Edit Your Profile</a>
+                          <a href="/profile/{{ id }}/edit" class="btn btn-success" role="button">Edit Your Profile</a>
                         {% endif %}
                         <hr>
                         <p>{{results[0].bio}}</p>
